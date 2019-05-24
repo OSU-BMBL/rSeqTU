@@ -12,7 +12,7 @@ install the rSeqTU package from Github and input their customized RNA-Seq datase
 de-multiplexing, quality controlling, reads alignment, random-forest-based feature selection, prediction
 model training, and TU prediction. Moreover, rSeqTU presents results in interactive visualizations for customized downstream analysis. rSeqTU also output read count matrix of both genes and TUs for further differentially expression analysis.
 
-**Citing us:** Niu Sheng-Yong, Liu Binqiang, Ma Qin, Chou Wen-Chi, rSeqTU—A Machine-Learning Based R Package for Prediction of Bacterial Transcription Units, *Frontiers in Genetics* VOL.10 2019 PG.374  URL=https://www.frontiersin.org/article/10.3389/fgene.2019.00374 DOI=10.3389/fgene.2019.00374 
+**Citing us:** Niu Sheng-Yong, Liu Binqiang, Ma Qin, Chou Wen-Chi, rSeqTU—A Machine-Learning Based R Package for Prediction of Bacterial Transcription Units, *Frontiers in Genetics* VOL.10 2019 PG.374  URL=https://www.frontiersin.org/article/10.3389/fgene.2019.00374 DOI:10.3389/fgene.2019.00374 
 
 ## Enviroment
 The rSeqTU R package has been tested on Mac and Linux OS. 
