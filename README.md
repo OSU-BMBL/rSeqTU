@@ -1,4 +1,5 @@
-# Introduction
+# rSeqTU: A Machine-Learning Based R Package for Prediction of Bacterial Transcription Units
+## Introduction
 A transcriptional unit (TU) is composed of one or multiple consecutive genes on the same strand of a
 bacterial genome. The genes within a TU are transcribed into a single mRNA to respond to specific
 growth conditions, and the TU are regulated by one promoter. To delineate the transcriptional regulatory
@@ -11,34 +12,36 @@ install the rSeqTU package from Github and input their customized RNA-Seq datase
 de-multiplexing, quality controlling, reads alignment, random-forest-based feature selection, prediction
 model training, and TU prediction. Moreover, rSeqTU presents results in interactive visualizations for customized downstream analysis. rSeqTU also output read count matrix of both genes and TUs for further differentially expression analysis.
 
-# Enviroment
+**Citing us:** Niu Sheng-Yong, Liu Binqiang, Ma Qin, Chou Wen-Chi, rSeqTU—A Machine-Learning Based R Package for Prediction of Bacterial Transcription Units, *Frontiers in Genetics* VOL.10 2019 PG.374  URL=https://www.frontiersin.org/article/10.3389/fgene.2019.00374 DOI=10.3389/fgene.2019.00374 
+
+## Enviroment
 The rSeqTU R package has been tested on Mac and Linux OS. 
 
-# Prerequisite packages:
+## Prerequisite packages:
 
 GenomicRanges, Gviz, QuasR, Rsubread, caret, e1071, gridBase, mlbench, seqinr
 
 
-# Workflow
+## Workflow
 
 <img src="rSeqTU_figures.001.png" width="1000" />
 
-# Quick Start
+# Usage
 
-### Install package
+## Install package
 ```R
 library(devtools)
 install_github("s18692001/rSeqTU")
 library(rSeqTU)
 ```
 
-### Download Datasets
+## Download Datasets
 
 Please download the sample datasets from NCBI SRA database. Two data sets are SRR6899499 (ccfA overexpression) and SRR6900706 (wild-type). 
 The reference genome sequence and gene annotations of Bacteroides fragilis NCTC 9343 are GCF_000025985.1_ASM2598v1_genomic.fna and GCF_000025985.1_ASM2598v1_genomic.gff.
 
 
-### Alignment
+## Alignment
 ```R
 
 library(QuasR)
@@ -68,7 +71,7 @@ local/QuasR_log_1ccc01b031f84.txt
 Genomic alignments have been created successfully
 ```
 
-### Quality Check
+## Quality Check
 
 
 ```R
@@ -87,7 +90,7 @@ SRR6900706:genome   5241700 5774831 25756600
 
 ```
 
-### Generate sum of the mapped read depths at each reference base position (.NA file)
+## Generate sum of the mapped read depths at each reference base position (.NA file)
 
 
 ```R
@@ -115,7 +118,7 @@ In this genome, there are
 ```
 
 
-### SVM modeling and prediction
+## SVM modeling and prediction
 
 ```R
 # Train model and generate prediction result in .bedgraph format
@@ -161,13 +164,13 @@ TU_SVM("SimulatedPositiveTUMatrix.txt", "SimulatedNegativeTUMatrix.txt", "Target
  $ GeneFoldChange : num  18.58 13.71 9.87 10.77 29.22 ...
 ```
 
-### Visualization in IGV (Import the .bedgraph, reference genome and annotation files)
+## Visualization in IGV (Import the .bedgraph, reference genome and annotation files)
 For tutorial of IGV, please check http://software.broadinstitute.org/software/igv/userguide
 
 
 <img src="IGV_demo.png" width="1200" />
 
-### Read counts matrix of gene and TU for downstream analysis such as differential expression analysis
+## Read counts matrix of gene and TU for downstream analysis such as differential expression analysis
 ```
 TU0001  67      722     +       1       BF9343_RS00005 BF9343_RS21315
 TU0002  749     2218    +       1       BF9343_RS00010
@@ -192,7 +195,10 @@ TU0020  11268   11702   +       1       BF9343_RS21395
 
 ```
 
+## Contact ##
 
+Any questions, problems, bugs are welcome and should be dumped to
+Qin Ma <Qin.Ma@osumc.edu>
 
 
 
