@@ -31,7 +31,7 @@ GenomicRanges, Gviz, QuasR, Rsubread, caret, e1071, gridBase, mlbench, seqinr
 ## Install package
 ```R
 library(devtools)
-install_github("s18692001/rSeqTU")
+install_github("OSU-BMBL/rSeqTU")
 library(rSeqTU)
 ```
 
